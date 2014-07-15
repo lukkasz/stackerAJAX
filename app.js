@@ -48,13 +48,19 @@ var showQuestion = function(question) {
 	return result;
 };
 
-// this function takes the answer object return by StackOverflow 
-// and create a ner result to be appended to DOM
-var showAnswerers = function (answers) {
+var showTopAnswerers = function(user) {
 
-	// clone our result template code
-	var result = $('.templates .answer').clone();
+	var result = $('.templates .answers').clone();
+
+	var score = result.find('.user-score');
+		score.text(user.score);
+
+	var userName = result.find('.user-name');
+		userName.text(user.user.display_name);
+
+	return result;
 };
+
 
 // this function takes the results object from StackOverflow
 // and creates info about search results to be appended to DOM
@@ -117,8 +123,10 @@ var getInspired = function(answerers) {
 				TODO: crete showAnswerers funciton that will take item as parameter and return
 				item.score; item.user.display-name and item.user.display_name and item.user.link
 			*/
-			var answers = showAnswerers( item );
-			$('.results').append(answers);
+
+			var answerer = showTopAnswerers( item );
+			$('.results').append(answerer);
+
 
 		});
 	})

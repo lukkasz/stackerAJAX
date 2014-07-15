@@ -47,23 +47,13 @@
 
 
 
-.profile-image {
-	display: inline-block;
-}
 .profile-image > img {
-	display: inline-block;
+
 	width: 50px;
 }
 
 .profile-name {
-	display: inline-block;
 	color: green;
-	width: 80px;
-	vertical-align: top;
+	
 }
 
-.score {
-	display: inline-block;
-	width: 80px;
-	vertical-align: top;
-}
