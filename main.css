@@ -16,11 +16,11 @@
 	width: 200px;
 	height: 200px;
 	-webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  margin-right: 1em;
-  border-radius: 5px;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	margin-right: 1em;
+  	border-radius: 5px;
 }
 
 .intro {
@@ -43,4 +43,27 @@
 .error {
 	background-color: #F78181;
 	padding: 1em;
+}
+
+
+
+.profile-image {
+	display: inline-block;
+}
+.profile-image > img {
+	display: inline-block;
+	width: 50px;
+}
+
+.profile-name {
+	display: inline-block;
+	color: green;
+	width: 80px;
+	vertical-align: top;
+}
+
+.score {
+	display: inline-block;
+	width: 80px;
+	vertical-align: top;
 }
