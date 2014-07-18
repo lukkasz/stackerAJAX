@@ -55,8 +55,13 @@ var showTopAnswerers = function(user) {
 	var score = result.find('.user-score');
 		score.text(user.score);
 
-	var userName = result.find('.user-name');
+	var userName = result.find('.user-name a');
 		userName.text(user.user.display_name);
+
+	var profileLink = result.find('.user-name a').attr('href', user.user.link);
+
+	var userReputation = result.find('.user-postNumber');
+		userReputation.text(user.post_count);
 
 	return result;
 };
@@ -117,16 +122,9 @@ var getInspired = function(answerers) {
 		var searchResults = showSearchResults (answerers, result.items.length);
 		$('.search-results').html(searchResults);
 		$.each(result.items, function(i, item) {
-			//console.log(item.user.display_name);
-
-			/* 
-				TODO: crete showAnswerers funciton that will take item as parameter and return
-				item.score; item.user.display-name and item.user.display_name and item.user.link
-			*/
-
+			
 			var answerer = showTopAnswerers( item );
 			$('.results').append(answerer);
-
 
 		});
 	})

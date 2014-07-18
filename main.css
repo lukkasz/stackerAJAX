@@ -47,13 +47,13 @@
 
 
 
-.profile-image > img {
-
-	width: 50px;
+table {
+	margin: 0 auto;
 }
 
-.profile-name {
-	color: green;
-	
+table th,
+table td {
+	display: inline-block;
+	width: 70px;
+	text-align: center;
 }
-

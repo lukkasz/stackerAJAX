@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -47,12 +47,22 @@
 			<dt>Asker</dt>
 				<dd class="asker"></dd>
 		</dl>
-		<dl class="result answers">
-			<dt>Score</dt>
-				<dd class="user-score"><a href="" target="_blank"></a></dd>
-			<dt>Name</dt>
-				<dd class="user-name"></dd>
-			</dl>
+		<div class="result answers">
+			<table>
+				<tr>
+					<th>Score</th>
+					<th>Name</th>
+					<th>#Posts</th>
+				</tr>
+				<tr>
+					<td class="user-score"></td>
+					<td class="user-name"><a href="" target="_blank"></a></td>
+					<td class="user-postNumber"></td>
+				</tr>
+			</table>
+			
+		</div>
+		
 		<div class="error">
 			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
 		</div>
